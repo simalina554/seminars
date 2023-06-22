@@ -1,0 +1,15 @@
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.csproj.AssemblyReference.cache
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.AssemblyInfoInputs.cache
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.AssemblyInfo.cs
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.csproj.CoreCompileInputs.cache
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\bin\Debug\net6.0\sem7_51.exe
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\bin\Debug\net6.0\sem7_51.deps.json
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\bin\Debug\net6.0\sem7_51.runtimeconfig.json
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\bin\Debug\net6.0\sem7_51.dll
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\bin\Debug\net6.0\sem7_51.pdb
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.dll
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\refint\sem7_51.dll
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.pdb
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\sem7_51.genruntimeconfig.cache
+C:\Users\FLATRON\Desktop\Алина\c#\sem7_51\obj\Debug\net6.0\ref\sem7_51.dll
