@@ -22,8 +22,9 @@ Write("Введите количество столбцов массива: ");
 int columns = int.Parse(ReadLine());
 int[,] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
-WriteLine();
+WriteLine("Измененный массив");
 MaxToMin(array);
+PrintArray(array);
 
 int[,] GetArray(int m, int n, int min, int max)
 {
@@ -40,18 +41,18 @@ int[,] GetArray(int m, int n, int min, int max)
 }
 
 void MaxToMin(int [,] inArray){
-    int [,] result = new int[inArray.GetLength(0), inArray.GetLength(1)];
     for (int i = 0; i < inArray.GetLength(0); i++){
-        for (int j = 0; j < inArray.GetLength(1); j++){
-            for (int k = 0; k < inArray.GetLength(1) - 1; k++){        
-                if (inArray[i, k] < inArray[i, k + 1]){
-                    result[i, j] = inArray[i, k] * inArray[k, j];
-                    result[i, j] ++;
+        for (int j = 0; j < inArray.GetLength(1)-1; j++){
+            for (int k = j+1; k < inArray.GetLength(1); k++){
+                if(inArray[i, k] > inArray[i, j]){
+                    int max = inArray[i, j];
+                    inArray[i, j] = inArray[i, k];
+                    inArray[i, k] = max;
                 }
             }
         }
+        
     }
-    return result;
 }
 
 void PrintArray(int[,] inArray){
