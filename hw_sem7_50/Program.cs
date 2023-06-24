@@ -37,7 +37,7 @@ string Num(int [,] array, int num){
                 res = "no";
             }
             else
-                res = "yes";
+                return "yes";
         }
     }
     return res;
