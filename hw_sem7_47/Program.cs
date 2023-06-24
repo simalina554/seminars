@@ -15,15 +15,16 @@ int columns = int.Parse(ReadLine());
 
 double[, ] array = GetArray(rows, columns, 0, 10);
 PrintArray(array);
+
 double[, ] GetArray(int m, int n, int min,int max){
-    double[, ] result = new double[m, n];
+    double[,] array = new double[m, n];
     Random random = new Random();
-    for(int i = 0; i<m; i++){
-        for(int j=0; j<n; j++){
-            result[i, j] = new Random().Next(min, max) + Math.Round(random.NextDouble(), 1);
+    for (int i = 0; i < m; i++){
+        for (int j = 0; j < n; j++){
+            array[i, j] = random.NextDouble();
         }
     }
-    return result;
+    return array;
 }
 
 void PrintArray(double[, ] inArray){
