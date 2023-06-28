@@ -1,4 +1,4 @@
-﻿/*Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+﻿﻿/*Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
 Например, задан массив:
 1 4 7 2
@@ -8,54 +8,41 @@
 Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 */
 using System;
-using static System.Console;
-
-Clear();
-
-Write("Введите количество строк массива: ");
-int rows = int.Parse(ReadLine());
-Write("Введите количество столбцов массива: ");
-int columns = int.Parse(ReadLine());
-int[,] array = GetArray(rows, columns, 0, 10);
-PrintArray(array);
-int[] sum=Sum(array);
-WriteLine($"{String.Join("; ",sum)}");
-
-int[,] GetArray(int m, int n, int min, int max)
-{
-    int[,] result = new int[m, n];
-    for (int i = 0; i < m; i++)
+int rowCount = 3; // Количество строк
+int columnCount = 4; // Количество столбцов
+string[,] array = GenerateRandomArray(rowCount, columnCount, 0, 100);
+Console.WriteLine(array);
+    static void Main()
     {
-        for (int j = 0; j < n; j++)
+        int rowCount = 3; // Количество строк
+        int columnCount = 4; // Количество столбцов
+
+        string[,] array = GenerateRandomArray(rowCount, columnCount, 0, 100);
+        
+        // Выводим сгенерированный двумерный массив строк на консоль
+        for (int i = 0; i < rowCount; i++)
         {
-            result[i, j] = new Random().Next(min, max + 1);
+            for (int j = 0; j < columnCount; j++)
+            {
+                Console.Write(array[i, j] + " ");
+            }
+            Console.WriteLine();
         }
-
     }
-    return result;
-}
 
-
-int[] Sum(int[,] inArray){
-    int[] result = new int[inArray.GetLength(0)];
-    for (int i = 0; i < inArray.GetLength(0); i++){
-        int sum=0;
-        for (int j = 0; j < inArray.GetLength(1); j++){
-            sum+=inArray[i, j];
-        }
-        result[i]=sum;
-    }
-    return result;
-}
-
-void PrintArray(int[,] inArray)
-{
-    for (int i = 0; i < inArray.GetLength(0); i++)
+    static string[,] GenerateRandomArray(int rowCount, int columnCount, int minValue, int maxValue)
     {
-        for (int j = 0; j < inArray.GetLength(1); j++)
+        Random random = new Random();
+        string[,] array = new string[rowCount, columnCount];
+
+        for (int i = 0; i < rowCount; i++)
         {
-            Write($"{inArray[i, j]} ");
+            for (int j = 0; j < columnCount; j++)
+            {
+                int randomNumber = random.Next(minValue, maxValue + 1); // Генерируем случайное число в заданном диапазоне
+                array[i, j] = randomNumber.ToString(); // Преобразуем число в строку и сохраняем в массив
+            }
         }
-        WriteLine();
+
+        return array;
     }
-}
